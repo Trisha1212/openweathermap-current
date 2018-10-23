@@ -13,7 +13,7 @@
 # APITest
 
 API test : OpenWeatherMap (https://openweathermap.org/current)
-- Check the basic functionality of API, GET: By city name.
+- Check the basic functionality of API, `GET: By city name`.
 - Currently one test is potentional bug 
 
 ## Tech stacks
