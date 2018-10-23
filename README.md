@@ -69,9 +69,12 @@ APP_ID=f3a6a630b3259fd00e07ff09d222c32e CITYNAME=london ECITYNAME='' EAPP_ID='' 
 │   └── openWeatherMapCity.js
 ├── package.json
 ├── payloads
+│   ├── cityNamePayloads.js
 │   └── commonPayloads.js
 └── test
     └── weatherMapIntegrationTest.js
+
+3 directories, 7 files
 
 ````
 
