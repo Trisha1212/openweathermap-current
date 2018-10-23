@@ -50,7 +50,7 @@ The Chai is a helper tool to for assertion of API response
 ### Running test specs
 
 ```
-APP_ID=f3a6a630b3259fd00e07ff09d222c32e npm_package_config_host=http://api.openweathermap.org/data/2.5 mocha weatherMapIntegrationTest.js
+APP_ID=f3a6a630b3259fd00e07ff09d222c32e CITYNAME=london ECITYNAME='' EAPP_ID='' npm_package_config_host=http://api.openweathermap.org/data/2.5 mocha weatherMapIntegrationTest.js
 
 ```
 

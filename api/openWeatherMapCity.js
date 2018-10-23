@@ -1,55 +1,45 @@
-request = require('supertest-as-promised')
+"use strict";
+
+var request = require('supertest-as-promised');
 
 //GET By city name 
-exports.cityName = function(baseurl, payload) {
+exports.cityName = function(baseurl, payload, cnPayload) {
     return request(baseurl)
         .get('/weather')
-        .query({
-            q: 'London'
-        })
-        .query(payload)
+        .query(cnPayload)
+        .query(payload);
 };
-exports.noCityName = function(baseurl, payload) {
+exports.noCityName = function(baseurl, payload,cnPayload) {
     return request(baseurl)
         .get('/weather')
-        .query({
-            q: ''
-        })
-        .query(payload)
+        .query(cnPayload)
+        .query(payload);
 };
 
-exports.putCityName = function(baseurl, payload) {
+exports.putCityName = function(baseurl, payload, cnPayload) {
     return request(baseurl)
         .put('/weather')
-        .query({
-            q: 'London'
-        })
-        .query(payload)
+        .query(cnPayload)
+        .query(payload);
 };
 
-exports.postCityName = function(baseurl, payload) {
+exports.postCityName = function(baseurl, payload,cnPayload) {
     return request(baseurl)
         .post('/weather')
-        .query({
-            q: 'London'
-        })
-        .query(payload)
+        .query(cnPayload)
+        .query(payload);
 };
 
-exports.deleteCityName = function(baseurl, payload) {
+exports.deleteCityName = function(baseurl, payload, cnPayload) {
     return request(baseurl)
         .delete('/weather')
-        .query({
-            q: 'London'
-        })
-        .query(payload)
+        .query(cnPayload)
+        .query(payload);
 };
 
-exports.noCityNameNoPayload = function(baseurl, payload) {
+exports.noCityNameNoPayload = function(baseurl, payload, cnPayload) {
     return request(baseurl)
         .get('/weather')
-        .query({
-            q: ''
-        })
-        .query()
+        .query(cnPayload)
+        .query(payload);
 };

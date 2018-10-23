@@ -1,5 +1,3 @@
-exports.appId = function(appId){
-  return {
-    'appId': appId
-  }
-}
+exports.appId = function (appId) {
+  return { appId };
+};

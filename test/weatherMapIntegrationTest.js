@@ -7,14 +7,18 @@
 var weathermap = require('../api/openWeatherMapCity.js');
 var common = require('../api/common.js');
 var commonpayload = require('../payloads/commonPayloads.js');
-var payload = commonpayload.appId(process.env.APP_ID); 
+var cityNamepayload = require('../payloads/cityNamePayloads.js');
+var chai = require('chai');
 
+// Using Assert style
+var should = chai.should(); 
+var expect = chai.expect;
 
-
-
-var chai = require('chai'),
-    should = chai.should(), // Using Assert style
-    expect = chai.expect;
+// Environment variables
+var payload = commonpayload.appId(process.env.APP_ID);
+var cityNamepayloads = cityNamepayload.cityName(process.env.CITYNAME);
+var emptycityNamepayloads = cityNamepayload.cityName(process.env.ECITYNAME);
+var emptyPayload = commonpayload.appId(process.env.EAPP_ID);
 
 /**
  * provides checks for By city name
@@ -27,7 +31,7 @@ describe("GET: By city name", function() {
          * @return successful response
          */
         it("should return successful response when passed query param as city name and valid app id", function(done) {
-            weathermap.cityName(common.baseurl, payload)
+            weathermap.cityName(common.baseurl, payload, cityNamepayloads)
                 .then(function(response) {
                     common.successStatus(response);
                     expect(response.body).to.have.own.property('coord');
@@ -78,7 +82,7 @@ describe("GET: By city name", function() {
          * @return failure response
          */
         it("should return failure response when passed query param with empty city name and valid App id", function(done) {
-            weathermap.noCityName(common.baseurl, payload)
+            weathermap.noCityName(common.baseurl, payload, emptycityNamepayloads)
                 .then(function(response) {
                     common.badRequestFailStatus(response);
                     done();
@@ -90,7 +94,7 @@ describe("GET: By city name", function() {
          * @return failure response 
          */
         it("should return failure response as put request", function(done) {
-            weathermap.putCityName(common.baseurl, payload)
+            weathermap.putCityName(common.baseurl, payload, cityNamepayloads)
                 .then(function(response) {
                     common.methodNotAllowedFailStatus(response);
                     done();
@@ -102,7 +106,7 @@ describe("GET: By city name", function() {
          * @return successful response
          */
         it("should return failure response when passed as post request but currently api gives successful response: potential bug", function(done) {
-            weathermap.postCityName(common.baseurl, payload)
+            weathermap.postCityName(common.baseurl, payload, cityNamepayloads)
                 .then(function(response) {
                     done();
                 });
@@ -113,7 +117,7 @@ describe("GET: By city name", function() {
          * @return failure response
          */
         it("should return failure response when passed as delete request", function(done) {
-            weathermap.deleteCityName(common.baseurl, payload)
+            weathermap.deleteCityName(common.baseurl, payload, cityNamepayloads)
                 .then(function(response) {
                     common.methodNotAllowedFailStatus(response);
                     done();
@@ -125,13 +129,11 @@ describe("GET: By city name", function() {
          * @return failure response
          */
         it("should return failure response when query param as city name is empty and app id is empty", function(done) {
-            weathermap.noCityNameNoPayload(common.baseurl, payload)
+            weathermap.noCityNameNoPayload(common.baseurl, emptyPayload, emptycityNamepayloads)
                 .then(function(response) {
                     common.authenticationFailStatus(response);
                     done();
                 });
         });
-
-
     });
 });
