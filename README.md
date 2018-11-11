@@ -7,7 +7,7 @@
   - [Setup](#setup)
     - [Dev Setup mocha and chai supertest](#dev-setup-mocha-and-chai-and-supertest)
     - [Running test cases](#running-test-cases)
-    - [Folder structure]
+    - [Folder structure](# Folder structure)
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 # APITest
@@ -27,7 +27,7 @@ API test : OpenWeatherMap (https://openweathermap.org/current)
 https://github.com/ASH-khan/notebook/wiki/JavaScript-Testing-Basics-with-Mocha-and-Chai
 ### Dev Setup nodejs and yarn
 * install node
-* Open weather map DevSet up(https://openweathermap.org/current)
+* Open weather map Dev SetUp(https://openweathermap.org/current)
 ```
 brew update
 brew install node
