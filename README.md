@@ -27,7 +27,7 @@ API test : OpenWeatherMap (https://openweathermap.org/current)
 https://github.com/ASH-khan/notebook/wiki/JavaScript-Testing-Basics-with-Mocha-and-Chai
 ### Dev Setup nodejs and yarn
 * install node
-* Best Buy Dev Set up(https://github.com/bestbuy/api-playground/#getting-started)
+* Open weather map DevSet up(https://openweathermap.org/current)
 ```
 brew update
 brew install node
