@@ -7,7 +7,7 @@
   - [Setup](#setup)
     - [Dev Setup mocha and chai supertest](#dev-setup-mocha-and-chai-and-supertest)
     - [Running test cases](#RunningTestSpecs)
-    - [Folder structure] (#FolderStructure)
+    - [Folder structure](#FolderStructure)
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 # APITest
