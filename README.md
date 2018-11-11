@@ -6,7 +6,7 @@
   - [Tech stacks](#tech-stacks)
   - [Setup](#setup)
     - [Dev Setup mocha and chai supertest](#dev-setup-mocha-and-chai-and-supertest)
-    - [Running test cases](#Running test specs)
+    - [Running test cases](#RunningTestSpecs)
     - [Folder structure] (#FolderStructure)
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -48,7 +48,7 @@ npm install
 This will install two command line tools, mocha chai and supertest-as-promised. Try running `mocha --version` to make sure it's working.
 The Chai is a helper tool to for assertion of API response
 
-# Running test specs
+# RunningTestSpecs
 
 ```
 APP_ID=f3a6a630b3259fd00e07ff09d222c32e CITYNAME=london ECITYNAME='' EAPP_ID='' npm_package_config_host=http://api.openweathermap.org/data/2.5 mocha weatherMapIntegrationTest.js
