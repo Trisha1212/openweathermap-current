@@ -6,8 +6,8 @@
   - [Tech stacks](#tech-stacks)
   - [Setup](#setup)
     - [Dev Setup mocha and chai supertest](#dev-setup-mocha-and-chai-and-supertest)
-    - [Running test cases](#running-test-cases)
-    - [Folder structure] (#Folder structure)
+    - [Running test cases](#Running test specs)
+    - [Folder structure] (#FolderStructure)
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 # APITest
@@ -56,7 +56,7 @@ APP_ID=f3a6a630b3259fd00e07ff09d222c32e CITYNAME=london ECITYNAME='' EAPP_ID='' 
 ```
 
 
-# Folder structure
+# FolderStructure
 
 - `test` -  The tests will call functions from the API and Payload areas of the framework and be responsible for asserting responses.
 - `API` -  HTTP requests are grouped based on the resource you are calling so if there are two resources called if the request changes it requires a single change to propagate through the framework.
