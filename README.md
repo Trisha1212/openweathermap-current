@@ -7,7 +7,7 @@
   - [Setup](#setup)
     - [Dev Setup mocha and chai supertest](#dev-setup-mocha-and-chai-and-supertest)
     - [Running test cases](#running-test-cases)
-    - [Folder structure](# Folder structure)
+    - [Folder structure] (#Folder structure)
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 # APITest
@@ -25,6 +25,7 @@ API test : OpenWeatherMap (https://openweathermap.org/current)
 ## Setup
 
 https://github.com/ASH-khan/notebook/wiki/JavaScript-Testing-Basics-with-Mocha-and-Chai
+
 ### Dev Setup nodejs and yarn
 * install node
 * Open weather map Dev SetUp(https://openweathermap.org/current)
@@ -47,7 +48,7 @@ npm install
 This will install two command line tools, mocha chai and supertest-as-promised. Try running `mocha --version` to make sure it's working.
 The Chai is a helper tool to for assertion of API response
 
-### Running test specs
+# Running test specs
 
 ```
 APP_ID=f3a6a630b3259fd00e07ff09d222c32e CITYNAME=london ECITYNAME='' EAPP_ID='' npm_package_config_host=http://api.openweathermap.org/data/2.5 mocha weatherMapIntegrationTest.js
@@ -55,7 +56,7 @@ APP_ID=f3a6a630b3259fd00e07ff09d222c32e CITYNAME=london ECITYNAME='' EAPP_ID='' 
 ```
 
 
-### Folder structure
+# Folder structure
 
 - `test` -  The tests will call functions from the API and Payload areas of the framework and be responsible for asserting responses.
 - `API` -  HTTP requests are grouped based on the resource you are calling so if there are two resources called if the request changes it requires a single change to propagate through the framework.
